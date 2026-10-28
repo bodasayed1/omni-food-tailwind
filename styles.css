@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* @custom-variant lg (@media (min-width: 768px)); */
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  color: #555;
+  overflow-x: hidden;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
+strong {
+  font-weight: 500;
+}
+@media (max-width: 767px) {
+  .header { height: 80px; padding-inline: 24px; }
+  h1 { font-size: 3.6rem !important; line-height: 1.1; }
+  h2 { font-size: 2.8rem !important; line-height: 1.2; }
+  h3 { font-size: 2.2rem !important; line-height: 1.25; }
+  p, address, aside, blockquote, label { font-size: 1.5rem !important; line-height: 1.5 !important; }
+  li { font-size: 1.5rem !important; }
+  main > section { padding-top: 64px; padding-bottom: 64px; }
+  .section-hero { padding-top: 32px; padding-bottom: 48px; }
+  .section-hero > div > div:first-child { text-align: center; }
+  .section-hero > div > div:last-child { text-align: center; }
+  .hero-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+  .header > a img { height: 20px; }
+  .btn-mobile-nav ion-icon { width: 40px; height: 40px; }
+  .main-nav a { font-size: 2rem !important; }
+  .hero-actions a, .pricing-card a, form button { padding: 12px 16px !important; font-size: 1.5rem !important; }
+  .hero-actions a { margin-right: 0 !important; }
+  .hero-customers { width: 100%; align-items: center; flex-direction: row; justify-content: center; gap: 12px; margin-top: 48px; }
+  .hero-customers > div { flex-shrink: 0; }
+  .hero-customers > div img { height: 32px !important; width: 32px !important; margin-right: -10px !important; border-width: 2px !important; }
+  .hero-customers > div img:last-child { margin-right: 0 !important; }
+  .hero-customers p { max-width: 150px; font-size: 1.2rem !important; line-height: 1.35 !important; text-align: left; }
+  #how img[src*="app-screen"] { display: block; width: 42%; margin-inline: auto; }
+  .meal-card-body, .pricing-card { padding: 24px !important; }
+  .pricing-card header p:last-child { font-size: 1.5rem !important; }
+  form :is(input, select) { font-size: 1.5rem !important; padding: 10px 12px !important; }
+  footer { padding-top: 64px; padding-bottom: 64px; }
+  footer p, footer address { font-size: 1.4rem !important; line-height: 1.5 !important; }
+  footer a { font-size: 1.2rem !important; }
+  footer nav > p { font-size: 1.6rem !important; }
+}
+
+.step-img-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step-img-box::before {
+  width: 60%;
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
+  z-index: 0;
+}
+
+.step-img-box::after {
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #fae5d3;
+  z-index: 0;
+}
+
+.step-img-box img {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  #how img[src*="app-screen"] {
+    width: 42%;
+  }
+}
+
